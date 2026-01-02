@@ -10,29 +10,65 @@
     body {
       margin: 0;
       background: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+    .menu-item {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
+      margin: 20px 0;
+    }
+    .menu-item p {
+      font-size: 1.2em;
+      margin: 5px 0;
     }
     model-viewer {
-      width: 100%;
-      height: 100%;
+      width: 300px;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
 
 <body>
 
-<model-viewer
-  src="pizza.glb"
-  ar
-  ar-modes="scene-viewer webxr quick-look"
-  camera-controls
-  auto-rotate
-  shadow-intensity="1"
-  scale="1 1 1">
-</model-viewer>
+<div class="menu-container">
+
+  <!-- Pizza Item -->
+  <div class="menu-item">
+    <p>Pizza - $10</p>
+    <model-viewer
+      src="pizza.glb"
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      scale="1 1 1">
+    </model-viewer>
+  </div>
+
+  <!-- Pastry Item -->
+  <div class="menu-item">
+    <p>Pastry - $5</p>
+    <model-viewer
+      src="pastry.glb"
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      scale="1 1 1">
+    </model-viewer>
+  </div>
+
+</div>
 
 </body>
 </html>
